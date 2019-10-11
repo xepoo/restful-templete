@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: helloworld-deployment
+  name: save-name-deployment
   labels:
-    app: helloworld
+    app: save-name
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
-      app: helloworld
+      app: save-name
   template:
     metadata:
       labels:
-        app: helloworld
+        app: save-name
     spec:
       containers:
-      - name: helloworld
-        image: helloworld:0.1
+      - name: save-name
+        image: save-name:0.1
         imagePullPolicy: Never
         ports:
         - containerPort: 5000
